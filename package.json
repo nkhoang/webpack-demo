@@ -4,7 +4,8 @@
   "description": "KMS Techcon 2016 Webpack Demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "export BUILD_ENV=dev && webpack",
+    "start": "webpack-dev-server --inline --port 3000 --content-base dist/"
   },
   "keywords": [
     "webpack"
@@ -12,11 +13,34 @@
   "author": "Hoang Khanh Nguyen",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "jquery": "^3.1.0",
     "lodash": "^4.14.2"
   },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
   "devDependencies": {
-    "webpack": "^1.13.1"
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.13.2",
+    "bootstrap-loader": "^1.2.0-beta.1",
+    "bootstrap-sass": "^3.3.7",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.22.0",
+    "imports-loader": "^0.6.5",
+    "node-sass": "^3.8.0",
+    "raw-loader": "^0.5.1",
+    "resolve-url-loader": "^1.6.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-merge": "^0.14.1"
   }
 }
