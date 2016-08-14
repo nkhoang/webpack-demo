@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<div class="container-fluid">
+    <%= require('partial/nav.html') %>
+
+    <div class="jumbotron">
+        <h1>Hello, Webpack!</h1>
+    </div>
+
+    <div class="row">
+        <div id="image-loader" class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Image Loader</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="add-btn" class="btn btn-primary">Add</button>
+                    <button id="reset-btn" class="btn">Reset</button>
+                </div>
+            </div>
+            <div class="row">
+                <div id="status">
+                    <progress max="7" value="0"></progress>
+                </div>
+                <div class="col-md-12" id="image-container"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

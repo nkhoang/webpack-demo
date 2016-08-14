@@ -5,8 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     context: path.join(__dirname, '..', 'src'),
     entry: {
-        home: './main.js',
-        features: './pages/features.js'
+        index: './index.js'
     },
     output: {
         path: path.join(__dirname, '..', 'dist'),
@@ -15,8 +14,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'KMS Techcon 2016 - Webpack Demo',
-            template: 'home-template.html',
-            filename: 'index.html',
+            template: 'index-template.html',
             inject: 'body',
             minify: {
                 collapseWhitespace: false,

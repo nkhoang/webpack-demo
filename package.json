@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "export BUILD_ENV=dev && webpack",
-    "start": "webpack-dev-server --inline --port 3000 --content-base dist/"
+    "start": "webpack-dev-server --inline --port 3001 --content-base dist/"
   },
   "keywords": [
     "webpack"
@@ -13,6 +13,7 @@
   "author": "Hoang Khanh Nguyen",
   "license": "ISC",
   "dependencies": {
+    "imagesloaded": "^4.1.0",
     "jquery": "^3.1.0",
     "lodash": "^4.14.2"
   },
