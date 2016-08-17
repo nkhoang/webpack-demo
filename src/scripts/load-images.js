@@ -1,4 +1,3 @@
-import $ from "jquery";
 import imagesLoaded from "imagesloaded";
 
 class ImageLoader {
@@ -25,7 +24,7 @@ class ImageLoader {
             this.onProgress(image);
         });
         imgLoad.on('always', () => {
-            this.onAlways()
+            this.onAlways();
         });
         // reset progress counter
         this.imageCount = imgLoad.images.length;
@@ -93,7 +92,7 @@ class ImageLoader {
 
     setText(elem, value) {
         let docElem = document.documentElement;
-        let textSetter = docElem.textContent !== undefined ? 'textContent' : 'innerText';
+        let textSetter = !docElem.textContent ? 'textContent' : 'innerText';
 
         elem[textSetter] = value;
     }
